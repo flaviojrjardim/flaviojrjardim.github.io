@@ -115,24 +115,13 @@ and (max-device-width : 736px) {
         display: block;
         margin: 0 auto;
     }
-    .left-content {
+    .left-content, .right-content {
         display: block;
         text-align: center;
-    }
-
-    .right-content {
-        display: block;
-        text-align: center;
-        padding-top: 5%;
     }
     .pic {
-        padding-top: 15%;
-        height: 200px;
-        width: 200px;
-    }
-
-    .footer {
-        font-size: 10px;
+        height: 180px;
+        width: 180px;
     }
 }
 
