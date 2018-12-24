@@ -112,7 +112,7 @@ a {
 @media only screen
 and (max-device-width : 736px) {
     .container {
-        display: block;
+        display: grid;
         margin: 0 auto;
     }
     .left-content, .right-content {
