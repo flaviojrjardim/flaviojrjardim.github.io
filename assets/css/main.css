@@ -123,9 +123,6 @@ and (max-device-width : 736px) {
         height: 180px;
         width: 180px;
     }
-    .footer{
-        visibility: hidden;
-    }
 }
 
 
