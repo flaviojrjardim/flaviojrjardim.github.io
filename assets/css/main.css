@@ -1,5 +1,5 @@
 html, body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
     background-color: #F5F5F5;
     height: 100%;
     margin: 0;
@@ -122,6 +122,9 @@ and (max-device-width : 736px) {
     .pic {
         height: 180px;
         width: 180px;
+    }
+    .footer{
+        visibility: hidden;
     }
 }
 
