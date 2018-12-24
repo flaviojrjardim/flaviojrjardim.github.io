@@ -120,8 +120,8 @@ and (max-device-width : 736px) {
         text-align: center;
     }
     .pic {
-        height: 180px;
-        width: 180px;
+        height: 320px;
+        width: 320px;
     }
 }
 
