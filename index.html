@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115044186-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-115044186-1');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Flávio Jardim | Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendor/fontawesome/css/fontawesome-all.css" >
@@ -21,6 +12,17 @@
     <link rel="icon" href="assets/icon/icon.ico" />
 </head>
 <body>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+        ga('create', 'UA-115044186-1', 'auto');
+        ga('send', 'pageview');
+  
+    </script>
+
     <div class="container">
         <div class="left-content">
             <img class="pic" src="assets/images/photo.png">
@@ -32,22 +34,22 @@
             <hr class="panel-cover_divider panel-cover_divider_secondary">
             <ul class="social-media">
                 <li class="item">
-                        <a title="Linkedin" href="https://www.linkedin.com/in/flaviojrjardim/" target="_blank" class="btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a title="Linkedin" href="https://www.linkedin.com/in/flaviojrjardim/" onclick="ga('send', 'event', 'Links', 'click', 'Open Linkedin', 1);" target="_blank" class="btn"><i class="fab fa-linkedin-in"></i></a>
                 </li>
                 <li class="item">
-                    <a title="Twitter" href="https://twitter.com/flaviojrjardim" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
+                    <a title="Twitter" href="https://twitter.com/flaviojrjardim" onclick="ga('send', 'event', 'Links', 'click', 'Open Twitter', 2);" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
                 </li>
                 <li class="item">
-                        <a title="Github" href="https://github.com/flaviojrjardim" target="_blank" class="btn"><i class="fab fa-github"></i></a>
+                        <a title="Github" href="https://github.com/flaviojrjardim" onclick="ga('send', 'event', 'Links', 'click', 'Open GitHub', 3);" target="_blank" class="btn"><i class="fab fa-github"></i></a>
                 </li>
                 <li class="item">
-                    <a title="Stack Overflow" href="https://stackoverflow.com/users/10084935/fl%c3%a1vio-jardim?tab=profile" target="_blank" class="btn"><i class="fab fa-stack-overflow"></i></a>
+                    <a title="Stack Overflow" href="https://stackoverflow.com/users/10084935/fl%c3%a1vio-jardim?tab=profile" onclick="ga('send', 'event', 'Links', 'click', 'Open StackOverflow', 4);" target="_blank" class="btn"><i class="fab fa-stack-overflow"></i></a>
                 </li>
                 <li class="item">
-                        <a title="CV" href="assets/documents/CVFlavioJardimEN.pdf" target="_blank" class="btn"><i class="fas fa-file-pdf"></i></a>
+                        <a title="CV" href="assets/documents/CVFlavioJardimEN.pdf" onclick="ga('send', 'event', 'Links', 'click', 'Open CV', 5);" target="_blank" class="btn"><i class="fas fa-file-pdf"></i></a>
                 </li>
                 <li class="item">
-                    <a title="Email" href="mailto:flaviojrjardim@gmail.com" target="_blank"  class="btn"><i class="fas fa-envelope"></i></a>
+                    <a title="Email" href="mailto:flaviojrjardim@gmail.com" onclick="ga('send', 'event', 'Links', 'click', 'Send Email', 6);" target="_blank"  class="btn"><i class="fas fa-envelope"></i></a>
                 </li>
             </ul>
             <h3 class="location">
