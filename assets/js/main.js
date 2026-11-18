@@ -49,8 +49,7 @@
         'edu.degree': 'Engenharia Informática',
         'edu.languages': 'Idiomas',
         'edu.langlist': 'Português (nativo) · Inglês (profissional)',
-        'contact.lead': 'Aberto a conversas sobre funções de engenharia sénior, problemas interessantes em FinTech, ou simplesmente uma boa conversa sobre .NET.',
-        'footer': 'Feito à mão — HTML, CSS e um pouco de JavaScript.'
+        'contact.lead': 'Aberto a conversas sobre funções de engenharia sénior, problemas interessantes em FinTech, ou simplesmente uma boa conversa sobre .NET.'
     };
 
     // Snapshot the English text that ships in the HTML
