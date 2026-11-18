@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Flávio Jardim | Software Engineer</title>
-    <meta name="description" content="Flávio Jardim — Software Engineer em Braga, Portugal.">
+    <meta name="description" content="Flávio Jardim — Software Engineer specialised in .NET, C# and SQL Server, building financial-markets software. Based in Braga, Portugal.">
+    <meta name="author" content="Flávio Jardim">
     <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d0f12" media="(prefers-color-scheme: dark)">
+    <link rel="canonical" href="https://flaviojrjardim.github.io/">
 
     <meta property="og:title" content="Flávio Jardim | Software Engineer">
-    <meta property="og:description" content="Software Engineer em Braga, Portugal.">
-    <meta property="og:image" content="assets/images/photo.jpg">
-    <meta property="og:type" content="website">
+    <meta property="og:description" content=".NET / C# Software Engineer building financial-markets software. Braga, Portugal.">
+    <meta property="og:image" content="https://flaviojrjardim.github.io/assets/images/photo.jpg">
+    <meta property="og:url" content="https://flaviojrjardim.github.io/">
+    <meta property="og:type" content="profile">
     <meta name="twitter:card" content="summary">
+
+    <!-- Apply saved theme/language before paint to avoid a flash -->
+    <script>
+        (function () {
+            var d = document.documentElement;
+            try {
+                var t = localStorage.getItem('theme');
+                if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
+            } catch (e) {}
+            var lang = 'en';
+            try {
+                var q = new URLSearchParams(location.search).get('lang');
+                var s = localStorage.getItem('lang');
+                if (q === 'pt' || q === 'en') lang = q;
+                else if (s === 'pt' || s === 'en') lang = s;
+                else if ((navigator.language || '').toLowerCase().indexOf('pt') === 0) lang = 'pt';
+            } catch (e) {}
+            d.setAttribute('lang', lang === 'pt' ? 'pt-PT' : 'en');
+            d.setAttribute('data-lang', lang);
+        })();
+    </script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1F7P38G8B"></script>
     <script>
@@ -23,65 +48,246 @@
         gtag('config', 'G-R1F7P38G8B');
     </script>
 
-    <link rel="stylesheet" href="vendor/fontawesome/css/fontawesome-all.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Flávio Jardim",
+        "jobTitle": "Software Engineer",
+        "url": "https://flaviojrjardim.github.io/",
+        "image": "https://flaviojrjardim.github.io/assets/images/photo.jpg",
+        "worksFor": { "@type": "Organization", "name": "Finantech" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Braga", "addressCountry": "PT" },
+        "alumniOf": "ISEP - Instituto Superior de Engenharia do Porto",
+        "sameAs": [
+            "https://www.linkedin.com/in/flaviojrjardim/",
+            "https://github.com/flaviojrjardim",
+            "https://stackoverflow.com/users/10084935/fl%c3%a1vio-jardim"
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="icon" href="assets/icon/icon.ico">
 </head>
 <body>
-    <div class="backdrop" aria-hidden="true">
-        <span class="blob blob--one"></span>
-        <span class="blob blob--two"></span>
-        <span class="blob blob--three"></span>
-    </div>
+    <!-- SVG icon sprite -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+        <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5M12 11v6M9 14l3 3 3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57v-2.02c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></symbol>
+        <symbol id="i-so" viewBox="0 0 24 24"><path fill="currentColor" d="M18.99 21.6v-6.4h2.13V23.7H2.88v-8.5h2.13v6.4h13.98zM7.44 14.6l10.46 2.2.44-2.1-10.46-2.2-.44 2.1zm1.38-5.02 9.69 4.52.9-1.94-9.69-4.52-.9 1.94zm2.68-4.76 8.21 6.84 1.37-1.64-8.21-6.84-1.37 1.64zM16.81 0l-1.72 1.28 6.38 8.58 1.72-1.28L16.81 0zM7.22 19.44h10.66v-2.13H7.22v2.13z"/></symbol>
+    </svg>
 
-    <main class="card">
-        <div class="avatar-wrap">
-            <img class="avatar" src="assets/images/photo.jpg" alt="Flávio Jardim" width="176" height="176">
+    <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="brand" href="#top" aria-label="Flávio Jardim">
+                <span class="brand__mark">FJ</span>
+            </a>
+            <nav class="nav" aria-label="Primary">
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#experience" data-i18n="nav.experience">Experience</a>
+                <a href="#skills" data-i18n="nav.skills">Skills</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="controls">
+                <div class="lang" role="group" aria-label="Language">
+                    <button type="button" class="lang__btn" data-set-lang="en" aria-pressed="true">EN</button>
+                    <button type="button" class="lang__btn" data-set-lang="pt" aria-pressed="false">PT</button>
+                </div>
+                <button type="button" class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode" data-i18n-attr="aria-label:theme">
+                    <svg class="icon icon--sun"><use href="#i-sun"/></svg>
+                    <svg class="icon icon--moon"><use href="#i-moon"/></svg>
+                </button>
+            </div>
         </div>
+    </header>
 
-        <h1 class="name">Flávio Jardim</h1>
-        <p class="role">Software Engineer</p>
+    <main id="main" class="wrap">
+        <!-- HERO -->
+        <section class="hero" id="top">
+            <img class="hero__photo" src="assets/images/photo.jpg" alt="Flávio Jardim" width="120" height="120">
+            <div>
+                <p class="eyebrow">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span data-i18n="hero.eyebrow">Software Engineer @ Finantech</span>
+                </p>
+                <h1 class="hero__title">Flávio Jardim</h1>
+                <p class="hero__lead" data-i18n-html="hero.lead">
+                    I build and evolve <strong>.NET</strong> systems for <strong>financial markets</strong> &mdash; from requirements and architecture to production. 8+ years shipping software in product teams.
+                </p>
+                <p class="hero__meta">
+                    <svg class="icon"><use href="#i-pin"/></svg>
+                    <span>Braga, Portugal</span>
+                </p>
+                <div class="hero__actions">
+                    <a class="btn btn--primary" href="assets/CV_FlavioJardim.pdf" target="_blank" rel="noopener">
+                        <svg class="icon"><use href="#i-file"/></svg>
+                        <span data-i18n="hero.cv">Download CV</span>
+                    </a>
+                    <a class="btn" href="mailto:flaviojrjardim@gmail.com">
+                        <svg class="icon"><use href="#i-mail"/></svg>
+                        <span data-i18n="hero.contact">Get in touch</span>
+                    </a>
+                    <div class="socials">
+                        <a class="icon-btn" href="https://www.linkedin.com/in/flaviojrjardim/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+                        <a class="icon-btn" href="https://github.com/flaviojrjardim" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a>
+                        <a class="icon-btn" href="https://stackoverflow.com/users/10084935/fl%c3%a1vio-jardim?tab=profile" target="_blank" rel="noopener" aria-label="Stack Overflow"><svg class="icon"><use href="#i-so"/></svg></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <p class="location">
-            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-            Braga; Portugal
-        </p>
+        <!-- HIGHLIGHTS -->
+        <section class="stats" aria-label="Highlights">
+            <div class="stat"><span class="stat__num">8+</span><span class="stat__label" data-i18n="stats.years">years in software</span></div>
+            <div class="stat"><span class="stat__num">.NET</span><span class="stat__label" data-i18n="stats.stack">C# · ASP.NET Core · SQL Server</span></div>
+            <div class="stat"><span class="stat__num">FinTech</span><span class="stat__label" data-i18n="stats.domain">capital markets &amp; investment banking</span></div>
+        </section>
 
-        <nav class="links" aria-label="Redes sociais e contacto">
-            <a class="btn" title="LinkedIn" href="https://www.linkedin.com/in/flaviojrjardim/" target="_blank" rel="noopener">
-                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                <span class="sr-only">LinkedIn</span>
-            </a>
-            <a class="btn" title="GitHub" href="https://github.com/flaviojrjardim" target="_blank" rel="noopener">
-                <i class="fab fa-github" aria-hidden="true"></i>
-                <span class="sr-only">GitHub</span>
-            </a>
-            <a class="btn" title="Stack Overflow" href="https://stackoverflow.com/users/10084935/fl%c3%a1vio-jardim?tab=profile" target="_blank" rel="noopener">
-                <i class="fab fa-stack-overflow" aria-hidden="true"></i>
-                <span class="sr-only">Stack Overflow</span>
-            </a>
-            <a class="btn" title="Email" href="mailto:flaviojrjardim@gmail.com">
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-                <span class="sr-only">Email</span>
-            </a>
-        </nav>
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <h2 class="section__title"><span class="section__num">01</span><span data-i18n="nav.about">About</span></h2>
+            <div class="prose">
+                <p data-i18n="about.p1">I'm a software engineer focused on the .NET ecosystem, currently building features for SIFOX®, a product suite for financial markets used by investment banks. I work across the whole lifecycle — requirements analysis, design, implementation, testing and integration — and give technical and architectural input to the teams around me.</p>
+                <p data-i18n="about.p2">Before that I owned the financial-area development team at e-Schooling, where I also onboarded new engineers and supported the team technically. I care about reliable software, clear code and teams that work well together.</p>
+                <p class="muted" data-i18n="about.p3">Outside work: good food, light-backpack trips and humbling myself at the gym every day.</p>
+            </div>
+        </section>
 
-        <a class="cv-btn" href="assets/CV_FlavioJardim.pdf" target="_blank" rel="noopener">
-            <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            CV
-        </a>
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience">
+            <h2 class="section__title"><span class="section__num">02</span><span data-i18n="nav.experience">Experience</span></h2>
+
+            <ol class="timeline">
+                <li class="job">
+                    <div class="job__when"><span data-i18n="m.jul">Jul</span> 2024 — <span data-i18n="present">Present</span></div>
+                    <div class="job__body">
+                        <h3 class="job__title"><span data-i18n="job.fin.role">Software Engineer</span> <span class="job__at">· Finantech</span></h3>
+                        <p class="job__place">Porto, Portugal</p>
+                        <ul class="job__list">
+                            <li data-i18n="job.fin.1">Develop new features for the SIFOX® product suite, focused on financial markets.</li>
+                            <li data-i18n="job.fin.2">Analyse and design prototypes, building solutions for integration with investment banking systems.</li>
+                            <li data-i18n="job.fin.3">Own work across the full development cycle, from requirements analysis to testing and integration.</li>
+                            <li data-i18n="job.fin.4">Provide technical and architectural input to other teams; ensure the quality and reliability of what we deliver to clients.</li>
+                        </ul>
+                        <ul class="tags"><li>C#</li><li>ASP.NET Core</li><li>ASP.NET MVC</li><li>.NET Framework</li><li>SQL Server</li><li>JavaScript</li><li>Scrum</li></ul>
+                    </div>
+                </li>
+
+                <li class="job">
+                    <div class="job__when"><span data-i18n="m.jan">Jan</span> 2020 — <span data-i18n="m.jul">Jul</span> 2024</div>
+                    <div class="job__body">
+                        <h3 class="job__title"><span data-i18n="job.es.role">Software Developer</span> <span class="job__at">· e-Schooling</span></h3>
+                        <p class="job__place">Braga, Portugal</p>
+                        <ul class="job__list">
+                            <li data-i18n="job.es.1">Owned the development of the financial area of the platform.</li>
+                            <li data-i18n="job.es.2">Designed and shipped new features driven by business logic and customer needs.</li>
+                            <li data-i18n="job.es.3">Investigated and fixed customer-reported issues in production.</li>
+                            <li data-i18n="job.es.4">Provided technical support to the team and onboarded new engineers.</li>
+                        </ul>
+                        <ul class="tags"><li>C#</li><li>ASP.NET Core</li><li>ASP.NET MVC</li><li>.NET Framework</li><li>SQL Server</li><li>JavaScript</li><li>Scrum</li></ul>
+                    </div>
+                </li>
+
+                <li class="job">
+                    <div class="job__when"><span data-i18n="m.apr">Apr</span> 2018 — <span data-i18n="m.apr">Apr</span> 2019</div>
+                    <div class="job__body">
+                        <h3 class="job__title"><span data-i18n="job.pri.role">Developer</span> <span class="job__at">· PRIMAVERA Business Software Solutions</span></h3>
+                        <p class="job__place">Braga, Portugal</p>
+                        <ul class="job__list">
+                            <li data-i18n="job.pri.1"><strong>Junior Software Developer</strong> (Dec 2018 – Apr 2019): part of a Scrum team building a PRIMAVERA cloud offering on .NET Core.</li>
+                            <li data-i18n="job.pri.2"><strong>Associate Developer</strong> (Apr – Dec 2018): owned the PRIMAVERA Developers Network, connecting the developer community — code samples on GitHub, technical content with product teams, community support on forums and Stack Overflow.</li>
+                        </ul>
+                        <ul class="tags"><li>C#</li><li>.NET Core</li><li>.NET Framework</li><li>SQL Server</li><li>Git</li><li>Scrum</li></ul>
+                    </div>
+                </li>
+
+                <li class="job">
+                    <div class="job__when"><span data-i18n="m.feb">Feb</span> 2017 — <span data-i18n="m.jun">Jun</span> 2017</div>
+                    <div class="job__body">
+                        <h3 class="job__title"><span data-i18n="job.solo.role">Frontend Developer (Internship)</span> <span class="job__at">· Solo PT</span></h3>
+                        <p class="job__place">Porto, Portugal</p>
+                        <ul class="job__list">
+                            <li data-i18n="job.solo.1">Built web and hybrid single-page applications for clients, following an MVP approach.</li>
+                        </ul>
+                        <ul class="tags"><li>AngularJS</li><li>ECMAScript</li><li>SASS</li><li>HTML5</li><li>Git</li></ul>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <h2 class="section__title"><span class="section__num">03</span><span data-i18n="nav.skills">Skills</span></h2>
+            <div class="skills">
+                <div class="skill-group">
+                    <h3 data-i18n="skills.backend">Backend</h3>
+                    <ul class="tags"><li>C#</li><li>.NET / .NET Core</li><li>.NET Framework</li><li>ASP.NET Core</li><li>ASP.NET MVC</li></ul>
+                </div>
+                <div class="skill-group">
+                    <h3 data-i18n="skills.data">Data</h3>
+                    <ul class="tags"><li>Microsoft SQL Server</li></ul>
+                </div>
+                <div class="skill-group">
+                    <h3 data-i18n="skills.frontend">Frontend</h3>
+                    <ul class="tags"><li>JavaScript</li><li>HTML5</li><li>SASS</li><li>AngularJS</li></ul>
+                </div>
+                <div class="skill-group">
+                    <h3 data-i18n="skills.practices">Practices</h3>
+                    <ul class="tags"><li data-i18n="skills.p1">Software design &amp; architecture</li><li>Scrum / Agile</li><li>Git</li><li data-i18n="skills.p2">Mentoring &amp; onboarding</li></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section" id="education">
+            <h2 class="section__title"><span class="section__num">04</span><span data-i18n="nav.education">Education &amp; languages</span></h2>
+            <div class="edu">
+                <div class="edu__item">
+                    <h3 data-i18n="edu.degree">Computer Engineering</h3>
+                    <p>ISEP — Instituto Superior de Engenharia do Porto</p>
+                </div>
+                <div class="edu__item">
+                    <h3 data-i18n="edu.languages">Languages</h3>
+                    <p data-i18n="edu.langlist">Portuguese (native) · English (professional)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact" id="contact">
+            <h2 class="section__title"><span class="section__num">05</span><span data-i18n="nav.contact">Contact</span></h2>
+            <div class="contact__card">
+                <p class="contact__lead" data-i18n="contact.lead">Open to conversations about senior engineering roles, interesting problems in FinTech, or just a good chat about .NET.</p>
+                <a class="contact__mail" href="mailto:flaviojrjardim@gmail.com">
+                    flaviojrjardim@gmail.com
+                    <svg class="icon"><use href="#i-arrow"/></svg>
+                </a>
+                <div class="contact__links">
+                    <a href="https://www.linkedin.com/in/flaviojrjardim/" target="_blank" rel="noopener">LinkedIn <svg class="icon"><use href="#i-arrow"/></svg></a>
+                    <a href="https://github.com/flaviojrjardim" target="_blank" rel="noopener">GitHub <svg class="icon"><use href="#i-arrow"/></svg></a>
+                    <a href="https://stackoverflow.com/users/10084935/fl%c3%a1vio-jardim?tab=profile" target="_blank" rel="noopener">Stack Overflow <svg class="icon"><use href="#i-arrow"/></svg></a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <i class="far fa-copyright" aria-hidden="true"></i>
-        <span id="year">2026</span> Flávio Jardim
+        <span>© <span id="year">2026</span> Flávio Jardim</span>
+        <span class="muted" data-i18n="footer">Built by hand — HTML, CSS &amp; a little JavaScript.</span>
     </footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
